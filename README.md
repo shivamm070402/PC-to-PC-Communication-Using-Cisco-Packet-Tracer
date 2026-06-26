@@ -1,4 +1,5 @@
 # PC-to-PC Communication Using Cisco Packet Tracer
+<img width="442" height="194" alt="image" src="https://github.com/user-attachments/assets/148afe1e-d029-4583-acb3-27523c4289e1" />
 
 ## 📌 Project Overview
 
