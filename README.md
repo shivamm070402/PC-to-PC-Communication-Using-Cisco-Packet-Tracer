@@ -263,14 +263,6 @@ Connect-2-PCs-Ping/
 
 ---
 
-## 📸 Screenshots
 
-Add screenshots for:
-
-- Network Topology
-- IP Configuration
-- Successful Ping Output
-
----
 
 
