@@ -33,8 +33,8 @@ If the destination responds, the devices are communicating successfully.
 ---
 
 ## 🌐 Network Topology
+<img width="711" height="244" alt="image" src="https://github.com/user-attachments/assets/35bb7133-6741-4db3-8038-9f3f0c02b225" />
 
-<img width="706" height="203" alt="image" src="https://github.com/user-attachments/assets/f8811a52-d65f-44d5-9173-3d45230a5860" />
 
 
 
