@@ -88,6 +88,7 @@ Wait until both links turn **green**.
 Navigate to:
 
 <img width="702" height="298" alt="image" src="https://github.com/user-attachments/assets/b105763f-3d8e-4868-a8f2-8659afe79030" />
+---text
 **PC0 → Desktop → IP Configuration**
 
 | Field | Value |
