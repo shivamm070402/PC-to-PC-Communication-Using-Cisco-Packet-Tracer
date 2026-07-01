@@ -166,25 +166,13 @@ If both commands receive replies, the network is working correctly.
 
 ## 📡 Packet Flow
 
-```text
-PC0
- │
- │ ICMP Echo Request
- ▼
-Switch
- │
- ▼
-PC1
+<img width="741" height="220" alt="image" src="https://github.com/user-attachments/assets/51d51410-684e-4a40-b156-d34c23e91590" />
 
-PC1
- │
- │ ICMP Echo Reply
- ▼
-Switch
- │
- ▼
-PC0
+<img width="724" height="239" alt="image" src="https://github.com/user-attachments/assets/5dfa9668-5dc2-4db9-94f4-94abfc1c7586" />
+
+
 ```
+
 
 ---
 
