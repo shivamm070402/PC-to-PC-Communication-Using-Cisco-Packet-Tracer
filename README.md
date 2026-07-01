@@ -174,7 +174,7 @@ If both commands receive replies, the network is working correctly.
 ```
 
 
----
+
 
 
 ## 🔍 Troubleshooting
