@@ -77,6 +77,7 @@ PC0 FastEthernet0  --->  Switch FastEthernet0/1
 ```text
 PC1 FastEthernet0  --->  Switch FastEthernet0/2
 ```
+<img width="269" height="110" alt="image" src="https://github.com/user-attachments/assets/8c35b34d-042e-435d-b901-65fd862672e1" />
 
 Wait until both links turn **green**.
 
