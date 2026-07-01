@@ -254,28 +254,8 @@ Upon completing this lab, you can:
 | Cisco Packet Tracer | Network Simulation |
 | Cisco 2960 Switch | Layer 2 Switching |
 | End Devices (PCs) | Network Hosts |
-| Command Prompt | Connectivity Testing |
+
 
 ---
-
-# 📂 Project Structure
-
-```text
-Connect-2-PCs-Ping/
-│
-├── README.md
-├── Connect_2_PCs.pkt
-└── screenshots/
-    ├── topology.png
-    ├── cable_connections.png
-    ├── ip_configuration_pc0.png
-    ├── ip_configuration_pc1.png
-    ├── icmp_request.png
-    ├── icmp_reply.png
-    └── ping_success.png
-```
-
----
-
 
 
