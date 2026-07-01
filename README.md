@@ -1,4 +1,4 @@
-````markdown
+
 # Connect 2 PCs and Test Communication Using Ping (Cisco Packet Tracer)
 
 A beginner-friendly Cisco Packet Tracer lab demonstrating how to build a simple Local Area Network (LAN), assign static IPv4 addresses, and verify connectivity using the `ping` command.
