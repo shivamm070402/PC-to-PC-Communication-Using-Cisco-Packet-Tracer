@@ -238,7 +238,7 @@ After completing this lab, you will be able to:
 
 ## 📂 Project Structure
 
-```text
+
 Connect-2-PCs-Ping/
 │
 ├── README.md
