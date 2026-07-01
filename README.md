@@ -113,6 +113,8 @@ Navigate to:
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | Leave Blank |
 
+<img width="676" height="297" alt="image" src="https://github.com/user-attachments/assets/ad094b1b-4755-4b48-9b54-23dd5e4c749c" />
+
 ---
 
 ## 📋 IP Address Table
