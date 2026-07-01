@@ -1,262 +1,294 @@
-# PC-to-PC Communication Using Cisco Packet Tracer
-<img width="442" height="194" alt="image" src="https://github.com/user-attachments/assets/148afe1e-d029-4583-acb3-27523c4289e1" />
-<img width="528" height="21" alt="image" src="https://github.com/user-attachments/assets/e5ae9606-8e60-40d2-98ca-fa8be43a371c" />
-<img width="403" height="199" alt="image" src="https://github.com/user-attachments/assets/5fcdc789-4aaf-4fb3-b965-0d27746f17be" />
+# Connect 2 PCs and Test Communication Using Ping (Cisco Packet Tracer)
 
+## 📌 Objective
 
+This lab demonstrates how to:
 
-## 📌 Project Overview
-
-This project demonstrates how to connect two PCs using a Layer 2 switch in Cisco Packet Tracer, configure IPv4 addresses, and verify network connectivity using the `ping` command. It is a beginner-friendly networking lab that introduces basic LAN communication concepts.
-
----
-
-## 🎯 Objective
-
-- Connect two PCs through a Cisco 2960 switch.
-- Configure IPv4 addresses on both PCs.
-- Verify communication using the `ping` command.
-- Understand how devices communicate within the same subnet.
+- Connect two PCs using a Cisco 2960 switch
+- Configure static IPv4 addresses
+- Verify network connectivity using the `ping` command
+- Understand basic Local Area Network (LAN) communication
 
 ---
 
-## 🛠️ Tools Used
+## 📖 Theory
+
+### What is Ping?
+
+`ping` is a network utility used to test connectivity between two devices on an IP network.
+
+It uses the **Internet Control Message Protocol (ICMP)** to send **Echo Request** packets and receive **Echo Reply** packets.
+
+If the destination responds, the devices are communicating successfully.
+
+---
+
+## 🛠️ Requirements
 
 - Cisco Packet Tracer
-- Windows Command Prompt (inside Packet Tracer)
-
----
-
-## 📋 Devices Used
-
-| Device | Quantity |
-|---------|----------|
-| PC | 2 |
-| Cisco 2960 Switch | 1 |
-| Copper Straight-Through Cable | 2 |
+- 2 PCs
+- Cisco 2960 Switch
+- Copper Straight-Through Cables
 
 ---
 
 ## 🌐 Network Topology
 
 ```text
-                   Ethernet                  Ethernet
-
-+-----------+                         +-------------+                         +-----------+
-|    PC0    |-------------------------|   Switch0   |-------------------------|    PC1    |
-+-----------+                         +-------------+                         +-----------+
-
-IP Address: 192.168.1.1                                        IP Address: 192.168.1.2
-Subnet Mask: 255.255.255.0                                     Subnet Mask: 255.255.255.0
++---------+         +-----------+         +---------+
+|   PC0   |---------|  Switch0  |---------|   PC1   |
++---------+         +-----------+         +---------+
 ```
 
 ---
 
-## 📑 IP Addressing Table
+## 🚀 Step 1: Open Cisco Packet Tracer
 
-| Device | Interface | IP Address | Subnet Mask |
-|---------|-----------|------------|-------------|
-| PC0 | FastEthernet0 | 192.168.1.1 | 255.255.255.0 |
-| PC1 | FastEthernet0 | 192.168.1.2 | 255.255.255.0 |
+Launch Cisco Packet Tracer.
 
 ---
 
-# Configuration Steps
+## 🖥️ Step 2: Add Devices
 
-## Step 1: Create a New Project
+### End Devices
 
-- Open Cisco Packet Tracer.
-- Create a new workspace.
+- PC0
+- PC1
 
----
+### Switches
 
-## Step 2: Add Devices
-
-- Add two PCs.
-- Add one Cisco 2960 switch.
+- Cisco 2960 Switch
 
 ---
 
-## Step 3: Connect Devices
+## 🔌 Step 3: Connect Devices
 
-Use **Copper Straight-Through Cable**.
+Choose:
 
-| From | To |
-|------|----|
-| PC0 FastEthernet0 | Switch FastEthernet0/1 |
-| PC1 FastEthernet0 | Switch FastEthernet0/2 |
+**Connections (⚡) → Copper Straight-Through Cable**
 
-Wait until both links become green.
+Connect:
+
+```text
+PC0 FastEthernet0  --->  Switch FastEthernet0/1
+
+PC1 FastEthernet0  --->  Switch FastEthernet0/2
+```
+
+Wait until both links turn **green**.
 
 ---
 
-## Step 4: Configure PC0
+## 🌍 Step 4: Configure PC0
 
-Desktop → IP Configuration
+Navigate to:
 
-| Setting | Value |
-|----------|-------|
-| IP Address | 192.168.1.1 |
+**PC0 → Desktop → IP Configuration**
+
+| Field | Value |
+|-------|-------|
+| IP Address | 192.168.1.10 |
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | Leave Blank |
 
 ---
 
-## Step 5: Configure PC1
+## 🌍 Step 5: Configure PC1
 
-Desktop → IP Configuration
+Navigate to:
 
-| Setting | Value |
-|----------|-------|
-| IP Address | 192.168.1.2 |
+**PC1 → Desktop → IP Configuration**
+
+| Field | Value |
+|-------|-------|
+| IP Address | 192.168.1.20 |
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | Leave Blank |
 
 ---
 
-## Step 6: Verify IP Configuration
+## 📋 IP Address Table
 
-On PC0
+| Device | IP Address | Subnet Mask |
+|---------|------------|-------------|
+| PC0 | 192.168.1.10 | 255.255.255.0 |
+| PC1 | 192.168.1.20 | 255.255.255.0 |
+
+---
+
+## 🧪 Step 6: Test Connectivity
+
+Open:
+
+**PC0 → Desktop → Command Prompt**
+
+Run:
 
 ```bash
-ipconfig
+ping 192.168.1.20
 ```
 
-Expected
+Expected Output:
 
 ```text
-IP Address.......192.168.1.1
-Subnet Mask......255.255.255.0
+Pinging 192.168.1.20 with 32 bytes of data:
+
+Reply from 192.168.1.20: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.20: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.20: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.20: bytes=32 time<1ms TTL=128
+
+Ping statistics:
+Packets: Sent = 4
+Received = 4
+Lost = 0 (0% loss)
 ```
 
-On PC1
+Now test from **PC1**:
 
 ```bash
-ipconfig
+ping 192.168.1.10
 ```
 
-Expected
+If both commands receive replies, the network is working correctly.
+
+---
+
+## 📡 Packet Flow
 
 ```text
-IP Address.......192.168.1.2
-Subnet Mask......255.255.255.0
+PC0
+ │
+ │ ICMP Echo Request
+ ▼
+Switch
+ │
+ ▼
+PC1
+
+PC1
+ │
+ │ ICMP Echo Reply
+ ▼
+Switch
+ │
+ ▼
+PC0
 ```
 
 ---
 
-## Step 7: Test Connectivity
+## 🔍 Troubleshooting
 
-From PC0
+### Problem: Request Timed Out
 
-```bash
-ping 192.168.1.2
-```
+Possible causes:
 
-Expected Output
-
-```text
-Reply from 192.168.1.2
-Reply from 192.168.1.2
-Reply from 192.168.1.2
-Reply from 192.168.1.2
-
-Packets: Sent = 4, Received = 4, Lost = 0
-```
-
-From PC1
-
-```bash
-ping 192.168.1.1
-```
-
-Expected Output
-
-```text
-Reply from 192.168.1.1
-```
+- Incorrect cable type
+- Wrong port connections
+- Incorrect IP addresses
+- Different subnet masks
+- Switch ports not yet active
 
 ---
 
-## 🔍 Simulation Mode
+### Problem: Destination Host Unreachable
 
-Switch to **Simulation Mode** in Cisco Packet Tracer.
+Possible causes:
 
-Observe the following packet flow:
+- Devices are in different networks
+- Incorrect IP configuration
+- Disabled network interface
 
-1. ARP Request
-2. ARP Reply
-3. ICMP Echo Request
-4. ICMP Echo Reply
+---
 
-This confirms successful communication between both PCs.
+## 📚 Concepts Learned
+
+- Computer Networks
+- Local Area Network (LAN)
+- Cisco Packet Tracer
+- Static IPv4 Addressing
+- Subnet Mask
+- ICMP Protocol
+- Ping Command
+- Basic Network Troubleshooting
+
+---
+
+## 💡 Mini Project
+
+Build the following topology:
+
+```text
+          Switch
+        /    |    \
+     PC0    PC1   PC2
+```
+
+Assign the following IP addresses:
+
+| Device | IP Address |
+|---------|------------|
+| PC0 | 192.168.1.10 |
+| PC1 | 192.168.1.20 |
+| PC2 | 192.168.1.30 |
+
+Subnet Mask:
+
+```text
+255.255.255.0
+```
+
+Verify communication by pinging every PC from the others.
+
+---
+
+## 🎯 Learning Outcomes
+
+After completing this lab, you will be able to:
+
+- Build a simple LAN in Cisco Packet Tracer
+- Connect devices through a switch
+- Configure static IPv4 addresses
+- Test connectivity using the `ping` command
+- Understand ICMP communication
+- Troubleshoot basic network issues
+
+---
+
+## 🛠️ Tools Used
+
+- Cisco Packet Tracer
+- Cisco 2960 Switch
+- End Devices (PCs)
 
 ---
 
 ## 📂 Project Structure
 
-```
-PC-to-PC-Communication/
+```text
+Connect-2-PCs-Ping/
 │
 ├── README.md
-├── PC_to_PC_Communication.pkt
-├── images/
-│   ├── topology.png
-│   ├── ping_pc0.png
-│   ├── ping_pc1.png
-│   └── simulation.png
-└── architecture.drawio
+├── Connect_2_PCs.pkt
+└── screenshots/
+    ├── topology.png
+    ├── ip_configuration.png
+    └── ping_success.png
 ```
 
 ---
 
-## 📸 Screenshots to Include
+## 📸 Screenshots
 
-- Network topology
-- IP configuration of PC0
-- IP configuration of PC1
-- Successful ping from PC0
-- Successful ping from PC1
-- Simulation mode packet flow
+Add screenshots for:
 
----
-
-## 📚 Networking Concepts Learned
-
-- Local Area Network (LAN)
-- IPv4 Addressing
-- Subnet Mask
-- Layer 2 Switching
-- Ethernet Communication
-- ARP (Address Resolution Protocol)
-- ICMP (Ping)
-- End-to-End Connectivity Testing
+- Network Topology
+- IP Configuration
+- Successful Ping Output
 
 ---
 
-## 🎓 Learning Outcomes
+## 📄 License
 
-After completing this project, you will be able to:
-
-- Build a simple LAN using Cisco Packet Tracer.
-- Connect devices using the correct Ethernet cable.
-- Configure IPv4 addressing.
-- Verify network configuration using `ipconfig`.
-- Test communication using `ping`.
-- Analyze ARP and ICMP packets in Simulation Mode.
-
----
-
-## 🚀 Future Improvements
-
-- Connect four or more PCs.
-- Configure VLANs.
-- Add a router for inter-network communication.
-- Implement DHCP.
-- Configure static routing.
-- Explore dynamic routing protocols.
-
----
-
-## 📖 Conclusion
-
-This lab demonstrates the fundamentals of computer networking by connecting two PCs through a Layer 2 switch. Proper IP configuration and successful `ping` responses confirm that devices within the same subnet can communicate without requiring a router. This project builds a strong foundation for more advanced networking and cybersecurity labs.
+This project is created for educational and learning purposes.
