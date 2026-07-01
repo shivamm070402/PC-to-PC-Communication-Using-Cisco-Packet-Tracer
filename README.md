@@ -225,33 +225,7 @@ Possible causes:
 
 ---
 
-## 💡 Mini Project
 
-Build the following topology:
-
-```text
-          Switch
-        /    |    \
-     PC0    PC1   PC2
-```
-
-Assign the following IP addresses:
-
-| Device | IP Address |
-|---------|------------|
-| PC0 | 192.168.1.10 |
-| PC1 | 192.168.1.20 |
-| PC2 | 192.168.1.30 |
-
-Subnet Mask:
-
-```text
-255.255.255.0
-```
-
-Verify communication by pinging every PC from the others.
-
----
 
 ## 🎯 Learning Outcomes
 
@@ -299,6 +273,4 @@ Add screenshots for:
 
 ---
 
-## 📄 License
 
-This project is created for educational and learning purposes.
