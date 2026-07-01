@@ -34,10 +34,9 @@ If the destination responds, the devices are communicating successfully.
 
 ## 🌐 Network Topology
 
-```
 <img width="706" height="203" alt="image" src="https://github.com/user-attachments/assets/25475ff4-d281-4750-9bd3-d15230944a23" />
 
-```
+
 
 ---
 
