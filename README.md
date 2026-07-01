@@ -74,6 +74,7 @@ PC0 FastEthernet0  --->  Switch FastEthernet0/1
 ```
 <img width="264" height="162" alt="image" src="https://github.com/user-attachments/assets/1692b82c-ccf2-4043-b3c2-069389028783" />
 
+```text
 PC1 FastEthernet0  --->  Switch FastEthernet0/2
 ```
 
