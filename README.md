@@ -277,22 +277,5 @@ Connect-2-PCs-Ping/
 
 ---
 
-# 📸 Screenshots
-
-- ✅ Network Topology
-- ✅ Cable Connections
-- ✅ PC0 IP Configuration
-- ✅ PC1 IP Configuration
-- ✅ Ping Command Output
-- ✅ ICMP Echo Request
-- ✅ ICMP Echo Reply
-
----
-
-# 📄 License
-
-This project is created for educational purposes and is free to use for learning, practice, and academic demonstrations.
-````
-
 
 
