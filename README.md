@@ -238,7 +238,7 @@ After completing this lab, you will be able to:
 
 ## 📂 Project Structure
 
-
+```text
 Connect-2-PCs-Ping/
 │
 ├── README.md
@@ -248,6 +248,8 @@ Connect-2-PCs-Ping/
     ├── ip_configuration.png
     └── ping_success.png
 ```
+
+---
 
 ---
 
