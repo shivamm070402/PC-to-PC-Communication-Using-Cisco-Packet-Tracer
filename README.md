@@ -172,32 +172,42 @@ If both commands receive replies, the network is working correctly.
 
 
 ```
-
-
-
-
-
 ## 🔍 Troubleshooting
 
-### Problem: Request Timed Out
+### ❌ Problem: Request Timed Out
 
-Possible causes:
+**Possible Causes:**
 
 - Incorrect cable type
 - Wrong port connections
 - Incorrect IP addresses
 - Different subnet masks
-- Switch ports not yet active
+- Switch ports not yet active (wait 30–60 seconds)
+
+**Solutions:**
+
+- Verify that a **Copper Straight-Through** cable is used.
+- Ensure both PCs are connected to the switch correctly.
+- Check that both PCs have valid IP addresses in the same subnet.
+- Confirm the subnet mask is `255.255.255.0` on both devices.
+- Wait until all switch port LEDs turn **green** before testing.
 
 ---
 
-### Problem: Destination Host Unreachable
+### ❌ Problem: Destination Host Unreachable
 
-Possible causes:
+**Possible Causes:**
 
-- Devices are in different networks
-- Incorrect IP configuration
-- Disabled network interface
+- Devices are in different networks.
+- Incorrect IP configuration.
+- Disabled network interface.
+
+**Solutions:**
+
+- Verify both PCs belong to the same network (e.g., `192.168.1.0/24`).
+- Recheck IP addresses and subnet masks.
+- Ensure the FastEthernet interface is enabled.
+- Verify all cable connections.
 
 ---
 
@@ -206,34 +216,39 @@ Possible causes:
 - Computer Networks
 - Local Area Network (LAN)
 - Cisco Packet Tracer
+- Cisco 2960 Switch
 - Static IPv4 Addressing
+- IPv4 Address Classes
 - Subnet Mask
-- ICMP Protocol
+- ICMP (Internet Control Message Protocol)
 - Ping Command
+- End-to-End Connectivity Testing
 - Basic Network Troubleshooting
 
 ---
-
-
 
 ## 🎯 Learning Outcomes
 
 After completing this lab, you will be able to:
 
-- Build a simple LAN in Cisco Packet Tracer
-- Connect devices through a switch
-- Configure static IPv4 addresses
-- Test connectivity using the `ping` command
-- Understand ICMP communication
-- Troubleshoot basic network issues
+- Build a simple LAN using Cisco Packet Tracer.
+- Connect two PCs through a Cisco switch.
+- Configure static IPv4 addresses.
+- Understand how devices communicate within the same subnet.
+- Verify connectivity using the `ping` command.
+- Understand ICMP Echo Request and Echo Reply messages.
+- Troubleshoot common LAN connectivity issues.
 
 ---
 
 ## 🛠️ Tools Used
 
-- Cisco Packet Tracer
-- Cisco 2960 Switch
-- End Devices (PCs)
+| Tool | Purpose |
+|------|---------|
+| Cisco Packet Tracer | Network Simulation |
+| Cisco 2960 Switch | Layer 2 Switching |
+| End Devices (PCs) | Network Hosts |
+| Command Prompt | Ping Testing |
 
 ---
 
@@ -247,10 +262,9 @@ Connect-2-PCs-Ping/
 └── screenshots/
     ├── topology.png
     ├── ip_configuration.png
+    ├── cable_connections.png
     └── ping_success.png
 ```
-
----
 
 ---
 
